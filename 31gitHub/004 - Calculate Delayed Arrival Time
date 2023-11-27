@@ -1,0 +1,8 @@
+ public int findDelayedArrivalTime(int arrivalTime, int delayedTime) {
+
+
+        if(arrivalTime + delayedTime == 24) return 0;
+        else if(arrivalTime == 24 || delayedTime==24 ) return Math.min(arrivalTime,delayedTime);
+        else if(arrivalTime+delayedTime>24) return Math.abs(arrivalTime+delayedTime -24);
+        else return arrivalTime+delayedTime;
+    }
