@@ -1,0 +1,36 @@
+public List<Integer> twoOutOfThree(int[] nums1, int[] nums2, int[] nums3) {
+       
+        Set<Integer> h1 = new HashSet<>();
+        Set<Integer> h2 = new HashSet<>();
+        Set<Integer> h3 = new HashSet<>();
+        List<Integer> list = new ArrayList<>();
+        for (int i = 0; i< nums1.length;i++){
+            h1.add(nums1[i]);
+        }
+
+        for (int i = 0; i< nums2.length;i++){
+            h2.add(nums2[i]);
+        }
+        for (int i = 0; i< nums3.length;i++){
+            h3.add(nums3[i]);
+        }
+
+                Set<Integer> total = new HashSet<>();
+
+
+         for (int x : h1){
+            if (h2.contains(x) || h3.contains(x)) total.add(x);
+        }
+
+        for(int x : h2){
+            if (h3.contains(x)) total.add(x);
+        }
+
+            for(int x:total){
+                list.add(x);
+            }
+
+
+
+        return list;
+    }
