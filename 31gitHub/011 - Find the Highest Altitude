@@ -1,0 +1,11 @@
+public int largestAltitude(int[] gain) {
+
+        int r=0;
+        int h=0;
+         for(int i:gain)
+        {
+            h=Math.max(h,r+i);
+            r=r+i;
+        }
+        return h;
+    }
