@@ -1,0 +1,16 @@
+public int repeatedNTimes(int[] nums) {
+        Set<Integer> w = new HashSet<>();
+        int l = nums.length/2;
+        int finish = 0;
+                    int count = 0;
+        for(int x : nums){
+            if(w.contains(x)){
+                count++;
+                if(count == l-1)
+                finish = x;
+        } else{
+            w.add(x);
+        }
+    }
+    return finish;
+    }
