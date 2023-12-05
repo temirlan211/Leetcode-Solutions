@@ -1,0 +1,19 @@
+public int countEven(int num) {
+        int count=0;
+        for(int i =1;i<=num;i++){
+            if(i%2 ==0 && i/10<1) count++;
+            else{
+                String temp = String.valueOf(i);
+                int sum = 0;
+                for(int j =0;j<temp.length();j++){
+                    int a = Integer.parseInt(String.valueOf(temp.charAt(j)));
+                    sum+=a;
+            }
+            if(sum%2 == 0) count++;
+
+    }
+    
+        }
+
+        return count;
+    }
