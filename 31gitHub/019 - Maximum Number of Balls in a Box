@@ -1,0 +1,25 @@
+public int countBalls(int lowLimit, int highLimit) {
+        int count=0;
+        HashSet<Integer> temp = new HashSet<>();
+            int [] list = new int[highLimit+lowLimit+1];
+        for(int i =lowLimit;i<=highLimit;i++){
+            String a = String.valueOf(i);
+            int sum = 0;
+            for(int j =0; j<a.length();j++){
+                int t = Integer.parseInt(String.valueOf(a.charAt(j)));
+                sum+=t;
+            }
+                    list[sum]+=1;
+                
+        
+        }
+          int d = 0;
+            for(int i =0;i<list.length;i++){
+                if(list[i]>d){
+                    d= list[i];
+                }
+
+            }
+
+        return d;
+    }
