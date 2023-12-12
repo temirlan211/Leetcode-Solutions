@@ -1,0 +1,16 @@
+ public boolean containsDuplicate(int[] nums) {
+        if(nums.length <1) return false;
+        HashSet<Integer> temp = new HashSet<>();
+        boolean result= false;
+
+        for(int x : nums){
+            if(temp.contains(x)){
+                result = true;
+                 break;
+                 }
+            else temp.add(x);
+                
+            
+        }
+        return result;
+    }
