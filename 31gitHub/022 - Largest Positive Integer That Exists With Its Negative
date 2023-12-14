@@ -1,0 +1,18 @@
+public int findMaxK(int[] nums) {
+        Arrays.sort(nums);
+
+        HashSet<Integer> temp = new HashSet<>();
+
+        for(int i : nums){
+            temp.add(i);
+        }
+
+        for(int i =0; i<nums.length;i++){
+            if(nums[i]<0 && temp.contains(Math.abs(nums[i]))){
+                return nums[i] *(-1);
+            }
+        }
+
+        return -1;
+
+    }
