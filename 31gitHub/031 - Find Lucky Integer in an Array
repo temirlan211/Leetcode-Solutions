@@ -1,0 +1,25 @@
+public int findLucky(int[] arr) {
+        List<Integer> temp = new ArrayList<>();
+        for(int i = 0;i<arr.length;i++){
+            int count = 0;
+        for(int j = 0; j< arr.length;j++){
+            if(arr[i] == arr[j]){
+                count++;
+            }
+
+        }
+        if(count == arr[i]){
+            temp.add(arr[i]);
+        }
+        }
+        int total = 0;
+        for(int i =0; i< temp.size();i++){
+            if(total < temp.get(i)){
+                total = temp.get(i);
+            }
+        }
+
+        if(total >0) return total;
+        else return -1;
+
+    }
