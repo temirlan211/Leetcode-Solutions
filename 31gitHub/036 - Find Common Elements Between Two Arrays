@@ -1,0 +1,23 @@
+public int[] findIntersectionValues(int[] nums1, int[] nums2) {
+        int n = 0;
+         int m = 0;   
+
+        HashSet <Integer> withN = new HashSet<>();
+        HashSet <Integer> withM = new HashSet<>();
+         for( int i = 0;i< nums1.length;i++){
+            withN.add(nums1[i]);
+            }
+            for( int i = 0;i< nums2.length;i++){
+            withM.add(nums2[i]);
+            if(withN.contains(nums2[i])) m++;
+           }
+
+            for(int x : nums1){
+                if(withM.contains(x)){
+                    n++;
+                }
+            }
+            
+        int [] temp = {n,m};
+        return temp;
+    }
